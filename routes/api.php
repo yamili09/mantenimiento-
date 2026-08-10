@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MantenimientoController;
 use App\Http\Controllers\AlertaController;
 use App\Http\Controllers\RegistroMaestroController;
+use App\Http\Controllers\Inventario\InventarioController; //modulo de inventario
 
 // Endpoints Rama 1
 Route::post('/login', [AuthController::class, 'login']);
@@ -23,3 +24,6 @@ Route::get('/inventario/alertas', [AlertaController::class, 'getInventarioBajo']
 Route::post('/clientes/registrar', [RegistroMaestroController::class, 'storeCliente']);
 Route::get('/mecanicos', [RegistroMaestroController::class, 'getMecanicos']);
 Route::post('/mecanicos/nuevo', [RegistroMaestroController::class, 'storeMecanico']);
+
+// ===== Módulo Inventario =====
+Route::apiResource('inventario', InventarioController::class);

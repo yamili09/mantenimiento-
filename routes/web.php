@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia; //modulo de inventario
 
 // Rama 1
 Route::get('/', function () { return view('login'); })->name('login');
@@ -14,3 +15,9 @@ Route::get('/alertas', function () { return view('alertas'); });
 
 // Rama 4
 Route::get('/maestros', function () { return view('maestros'); });
+
+
+// ===== Módulo Inventario =====
+Route::get('/inventario', function () {
+    return Inertia::render('Inventario/Index');
+});

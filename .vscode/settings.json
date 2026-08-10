@@ -1,0 +1,5 @@
+{
+    "vue.autoInsert.dotValue": true,
+    "vue.editor.focusMode": true,
+    "vue.format.script.initialIndent": true
+}
